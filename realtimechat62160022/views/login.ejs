@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<style>
+  body {
+    background: linear-gradient(50deg,  rgb(20, 224, 156), rgb(146, 206, 67), rgb(84, 178, 255));
+    overflow: hidden;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    color: rgb(0, 0, 0);
+     
+  }
+div{
+    border: 2px solid #222222;
+    color: rgb(0, 0, 0);
+    border-radius: 40px;
+    padding: 20px;
+    margin: 0px 0;
+    background-attachment: scroll;
+  
+  }
+  h1 {
+    font-size: 3em;
+    padding: 1em;
+    margin: 0;
+    font-weight: 300;
+    text-align: center;
+}
+
+    .text-muted {
+    color: #000000!important;
+    text-shadow: 5px 5px 5px rgb(59, 59, 59);
+    
+}
+.btn-primary {
+  background-color:rgb(255, 0, 0);
+
+}
+</style>
+</head>
+<body>
+  
+    <div class="container p-5">
+        <h1 class="text-center mb-5 text-uppercase text-muted">R e a l T i m e C h a t</h1>    
+            <div class="text-uppercase center">
+              <form action="" method="POST">
+                
+                  <label for="_email">Name</label>
+                  <input type="text" name="user_name" id="_rname" class="form-control" placeholder="Name" rnodeequired>
+                
+                  
+                  <label for="_email">Email</label>
+                  <input type="text" name="user_email" id="_email" class="form-control" placeholder="Email" rnodeequired>
+               
+                <% if (locals.login_errors) { 
+                  login_errors.forEach(function(error_msg){ %>
+                  <div class= "alert alert-danger" role="alert"><%= error_msg %></div>
+                <% });
+                } %>
+                <button type="submit" class="btn btn-primary">Enter RoomChat</button>
+            </form>      
+        </div>
+    </div>
+</body>
+</html>
